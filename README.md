@@ -1,1 +1,3 @@
-# ct_script_generater
+# CodeTyphon Compile Script Generator
+
+

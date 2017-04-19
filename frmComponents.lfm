@@ -1,0 +1,103 @@
+object FormComponents: TFormComponents
+  Left = 392
+  Height = 500
+  Top = 250
+  Width = 800
+  BorderIcons = [biSystemMenu, biMinimize]
+  BorderStyle = bsDialog
+  Caption = 'Components'
+  ClientHeight = 500
+  ClientWidth = 800
+  OnCreate = FormCreate
+  Position = poMainFormCenter
+  LCLVersion = '6.0'
+  object pgComp: TPageControl
+    Left = 0
+    Height = 500
+    Top = 0
+    Width = 800
+    ActivePage = tsTyphon
+    Align = alClient
+    TabIndex = 0
+    TabOrder = 0
+    object tsTyphon: TTabSheet
+      Caption = 'Typhon Pkgs'
+      ClientHeight = 461
+      ClientWidth = 794
+      object sbTyphon: TScrollBox
+        Left = 0
+        Height = 461
+        Top = 0
+        Width = 794
+        HorzScrollBar.Page = 1
+        HorzScrollBar.Visible = False
+        VertScrollBar.Increment = 2
+        VertScrollBar.Page = 22
+        VertScrollBar.Smooth = True
+        Align = alClient
+        ClientHeight = 461
+        ClientWidth = 779
+        TabOrder = 0
+        object cgTyphon: TCheckGroup
+          Left = 0
+          Height = 22
+          Top = 0
+          Width = 779
+          Align = alTop
+          AutoFill = True
+          AutoSize = True
+          ChildSizing.LeftRightSpacing = 6
+          ChildSizing.TopBottomSpacing = 6
+          ChildSizing.VerticalSpacing = 8
+          ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+          ChildSizing.EnlargeVertical = crsHomogenousChildResize
+          ChildSizing.ShrinkHorizontal = crsScaleChilds
+          ChildSizing.ShrinkVertical = crsScaleChilds
+          ChildSizing.Layout = cclLeftToRightThenTopToBottom
+          ChildSizing.ControlsPerLine = 4
+          Columns = 4
+          ParentColor = False
+          TabOrder = 0
+        end
+      end
+    end
+    object tsFPC: TTabSheet
+      Caption = 'FPC Pkgs'
+      ClientHeight = 461
+      ClientWidth = 794
+      object sbFPC: TScrollBox
+        Left = 0
+        Height = 461
+        Top = 0
+        Width = 794
+        HorzScrollBar.Page = 1
+        HorzScrollBar.Visible = False
+        VertScrollBar.Page = 22
+        Align = alClient
+        ClientHeight = 461
+        ClientWidth = 779
+        TabOrder = 0
+        object cgFPC: TCheckGroup
+          Left = 0
+          Height = 22
+          Top = 0
+          Width = 779
+          Align = alTop
+          AutoFill = True
+          AutoSize = True
+          ChildSizing.LeftRightSpacing = 6
+          ChildSizing.TopBottomSpacing = 6
+          ChildSizing.VerticalSpacing = 8
+          ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+          ChildSizing.EnlargeVertical = crsHomogenousChildResize
+          ChildSizing.ShrinkHorizontal = crsScaleChilds
+          ChildSizing.ShrinkVertical = crsScaleChilds
+          ChildSizing.Layout = cclLeftToRightThenTopToBottom
+          ChildSizing.ControlsPerLine = 4
+          Columns = 4
+          TabOrder = 0
+        end
+      end
+    end
+  end
+end

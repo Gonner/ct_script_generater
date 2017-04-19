@@ -1,17 +1,16 @@
 object FormMain: TFormMain
   Left = 392
-  Height = 657
+  Height = 780
   Top = 250
-  Width = 799
+  Width = 800
   HorzScrollBar.Visible = False
   VertScrollBar.Visible = False
   AutoSize = True
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsDialog
   Caption = 'CodeTyphon Compile Script Generator'
-  ClientHeight = 657
-  ClientWidth = 799
-  Color = clWhite
+  ClientHeight = 780
+  ClientWidth = 800
   OnCreate = FormCreate
   Position = poScreenCenter
   LCLVersion = '6.0'
@@ -19,35 +18,35 @@ object FormMain: TFormMain
     Left = 8
     Height = 73
     Top = 8
-    Width = 783
+    Width = 784
     Align = alTop
     BorderSpacing.Around = 8
     Caption = 'lpr file'
-    ClientHeight = 56
-    ClientWidth = 779
+    ClientHeight = 51
+    ClientWidth = 776
     TabOrder = 0
     object pnlLprFile: TPanel
       Left = 8
       Height = 40
       Top = 8
-      Width = 763
+      Width = 760
       Align = alTop
       BorderSpacing.Around = 8
       BevelOuter = bvNone
       ClientHeight = 40
-      ClientWidth = 763
+      ClientWidth = 760
       TabOrder = 0
       object edtLprFile: TEdit
         Left = 4
         Height = 32
         Top = 4
-        Width = 719
+        Width = 716
         Align = alClient
         BorderSpacing.Around = 4
         TabOrder = 0
       end
       object btnLprFile: TButton
-        Left = 727
+        Left = 724
         Height = 32
         Top = 4
         Width = 32
@@ -63,33 +62,33 @@ object FormMain: TFormMain
     Left = 8
     Height = 120
     Top = 89
-    Width = 783
+    Width = 784
     Align = alTop
     BorderSpacing.Around = 8
     Caption = 'Includes'
-    ClientHeight = 103
-    ClientWidth = 779
+    ClientHeight = 98
+    ClientWidth = 776
     TabOrder = 1
     object pnlInclude: TPanel
       Left = 8
-      Height = 87
+      Height = 82
       Top = 8
-      Width = 763
+      Width = 760
       Align = alClient
       BorderSpacing.Around = 8
       BevelOuter = bvNone
-      ClientHeight = 87
-      ClientWidth = 763
+      ClientHeight = 82
+      ClientWidth = 760
       TabOrder = 0
       object pnlIncludeBtn: TPanel
-        Left = 727
-        Height = 79
+        Left = 724
+        Height = 74
         Top = 4
         Width = 32
         Align = alRight
         BorderSpacing.Around = 4
         BevelOuter = bvNone
-        ClientHeight = 79
+        ClientHeight = 74
         ClientWidth = 32
         TabOrder = 0
         object btnInclude: TButton
@@ -115,13 +114,12 @@ object FormMain: TFormMain
       end
       object lvInclude: TListBox
         Left = 4
-        Height = 79
+        Height = 74
         Top = 4
-        Width = 719
+        Width = 716
         Align = alClient
         BorderSpacing.Around = 4
         ItemHeight = 0
-        ScrollWidth = 700
         TabOrder = 1
       end
     end
@@ -130,33 +128,33 @@ object FormMain: TFormMain
     Left = 8
     Height = 120
     Top = 345
-    Width = 783
+    Width = 784
     Align = alTop
     BorderSpacing.Around = 8
     Caption = 'Library'
-    ClientHeight = 103
-    ClientWidth = 779
+    ClientHeight = 98
+    ClientWidth = 776
     TabOrder = 2
     object pnlLibrary: TPanel
       Left = 8
-      Height = 87
+      Height = 82
       Top = 8
-      Width = 763
+      Width = 760
       Align = alClient
       BorderSpacing.Around = 8
       BevelOuter = bvNone
-      ClientHeight = 87
-      ClientWidth = 763
+      ClientHeight = 82
+      ClientWidth = 760
       TabOrder = 0
       object pnlLibraryBtn: TPanel
-        Left = 727
-        Height = 79
+        Left = 724
+        Height = 74
         Top = 4
         Width = 32
         Align = alRight
         BorderSpacing.Around = 4
         BevelOuter = bvNone
-        ClientHeight = 79
+        ClientHeight = 74
         ClientWidth = 32
         TabOrder = 0
         object btnLibrary: TButton
@@ -182,13 +180,12 @@ object FormMain: TFormMain
       end
       object lvLibrary: TListBox
         Left = 4
-        Height = 79
+        Height = 74
         Top = 4
-        Width = 719
+        Width = 716
         Align = alClient
         BorderSpacing.Around = 4
         ItemHeight = 0
-        ScrollWidth = 700
         TabOrder = 1
       end
     end
@@ -197,33 +194,33 @@ object FormMain: TFormMain
     Left = 8
     Height = 120
     Top = 217
-    Width = 783
+    Width = 784
     Align = alTop
     BorderSpacing.Around = 8
     Caption = 'Unit'
-    ClientHeight = 103
-    ClientWidth = 779
+    ClientHeight = 98
+    ClientWidth = 776
     TabOrder = 3
     object pnlUnit: TPanel
       Left = 8
-      Height = 87
+      Height = 82
       Top = 8
-      Width = 763
+      Width = 760
       Align = alClient
       BorderSpacing.Around = 8
       BevelOuter = bvNone
-      ClientHeight = 87
-      ClientWidth = 763
+      ClientHeight = 82
+      ClientWidth = 760
       TabOrder = 0
       object pnlUnitBtn: TPanel
-        Left = 727
-        Height = 79
+        Left = 724
+        Height = 74
         Top = 4
         Width = 32
         Align = alRight
         BorderSpacing.Around = 4
         BevelOuter = bvNone
-        ClientHeight = 79
+        ClientHeight = 74
         ClientWidth = 32
         TabOrder = 0
         object btnUnit: TButton
@@ -249,13 +246,12 @@ object FormMain: TFormMain
       end
       object lvUnit: TListBox
         Left = 4
-        Height = 79
+        Height = 74
         Top = 4
-        Width = 719
+        Width = 716
         Align = alClient
         BorderSpacing.Around = 4
         ItemHeight = 0
-        ScrollWidth = 700
         TabOrder = 1
       end
     end
@@ -263,37 +259,37 @@ object FormMain: TFormMain
   object gbExtra: TGroupBox
     Left = 8
     Height = 111
-    Top = 473
-    Width = 783
+    Top = 594
+    Width = 784
     Align = alTop
     BorderSpacing.Around = 8
     Caption = 'Extra'
-    ClientHeight = 94
-    ClientWidth = 779
+    ClientHeight = 89
+    ClientWidth = 776
     TabOrder = 4
     object pnlExtra: TPanel
       Left = 8
       Height = 75
       Top = 8
-      Width = 763
+      Width = 760
       Align = alTop
       BorderSpacing.Around = 8
       BevelOuter = bvNone
       ClientHeight = 75
-      ClientWidth = 763
+      ClientWidth = 760
       TabOrder = 0
       object chkDebug: TCheckBox
         Left = 4
         Height = 67
         Top = 4
-        Width = 61
+        Width = 60
         Align = alLeft
         BorderSpacing.Around = 4
         Caption = 'Debug'
         TabOrder = 0
       end
       object rgOptimize: TRadioGroup
-        Left = 81
+        Left = 80
         Height = 75
         Top = 0
         Width = 216
@@ -308,8 +304,8 @@ object FormMain: TFormMain
         ChildSizing.ShrinkVertical = crsScaleChilds
         ChildSizing.Layout = cclLeftToRightThenTopToBottom
         ChildSizing.ControlsPerLine = 3
-        ClientHeight = 58
-        ClientWidth = 212
+        ClientHeight = 53
+        ClientWidth = 208
         Columns = 3
         ItemIndex = 0
         Items.Strings = (
@@ -320,7 +316,7 @@ object FormMain: TFormMain
         TabOrder = 1
       end
       object chkDesktop: TCheckBox
-        Left = 313
+        Left = 312
         Height = 75
         Top = 0
         Width = 71
@@ -330,10 +326,10 @@ object FormMain: TFormMain
         TabOrder = 2
       end
       object chkClean: TCheckBox
-        Left = 400
+        Left = 399
         Height = 75
         Top = 0
-        Width = 54
+        Width = 55
         Align = alLeft
         BorderSpacing.Left = 16
         Caption = 'Clean'
@@ -355,8 +351,8 @@ object FormMain: TFormMain
         ChildSizing.ShrinkVertical = crsScaleChilds
         ChildSizing.Layout = cclLeftToRightThenTopToBottom
         ChildSizing.ControlsPerLine = 3
-        ClientHeight = 58
-        ClientWidth = 220
+        ClientHeight = 53
+        ClientWidth = 216
         Columns = 3
         Items.Strings = (
           'Lin64'
@@ -374,14 +370,14 @@ object FormMain: TFormMain
   object pnlButtons: TPanel
     Left = 8
     Height = 50
-    Top = 592
-    Width = 783
+    Top = 713
+    Width = 784
     Align = alTop
     BorderSpacing.Around = 8
     BevelInner = bvRaised
     BevelOuter = bvLowered
     ClientHeight = 50
-    ClientWidth = 783
+    ClientWidth = 784
     TabOrder = 5
     object btnLoad: TButton
       Left = 10
@@ -492,6 +488,76 @@ object FormMain: TFormMain
       BorderSpacing.Around = 8
       Caption = 'About'
       TabOrder = 8
+    end
+  end
+  object gbComponents: TGroupBox
+    Left = 8
+    Height = 113
+    Top = 473
+    Width = 784
+    Align = alTop
+    BorderSpacing.Around = 8
+    Caption = 'Components'
+    ClientHeight = 91
+    ClientWidth = 776
+    TabOrder = 6
+    object pnlComponents: TPanel
+      Left = 8
+      Height = 75
+      Top = 8
+      Width = 760
+      Align = alClient
+      BorderSpacing.Around = 8
+      BevelOuter = bvNone
+      ClientHeight = 75
+      ClientWidth = 760
+      TabOrder = 0
+      object pnlCompBtns: TPanel
+        Left = 724
+        Height = 67
+        Top = 4
+        Width = 32
+        Align = alRight
+        BorderSpacing.Around = 4
+        BevelOuter = bvNone
+        ClientHeight = 67
+        ClientWidth = 32
+        TabOrder = 0
+        object btnComponents: TButton
+          Left = 0
+          Height = 32
+          Top = 0
+          Width = 32
+          Align = alTop
+          Caption = '...'
+          OnClick = btnComponentsClick
+          TabOrder = 0
+        end
+      end
+      object sgComponents: TStringGrid
+        Left = 0
+        Height = 75
+        Top = 0
+        Width = 720
+        Align = alClient
+        AutoEdit = False
+        AutoFillColumns = True
+        BorderStyle = bsNone
+        FixedCols = 0
+        FixedRows = 0
+        Flat = True
+        Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goSmoothScroll]
+        RowCount = 10
+        ScrollBars = ssAutoVertical
+        TabOrder = 1
+        ColWidths = (
+          141
+          141
+          141
+          141
+          141
+        )
+      end
     end
   end
 end

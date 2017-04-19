@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, ComCtrls,
-  StdCtrls, ExtCtrls, LazFileUtils, untProjInfo;
+  StdCtrls, ExtCtrls, Grids, LazFileUtils, untProjInfo;
 
 type
 
@@ -16,6 +16,7 @@ type
     btnIncludeDel: TButton;
     btnLibraryDel: TButton;
     btnUnitDel: TButton;
+    btnComponents: TButton;
     bv1: TBevel;
     bv2: TBevel;
     btnLibrary: TButton;
@@ -40,9 +41,12 @@ type
     gbLpr: TGroupBox;
     gbInclude: TGroupBox;
     gbExtra: TGroupBox;
+    gbComponents: TGroupBox;
     lvInclude: TListBox;
     lvLibrary: TListBox;
     lvUnit: TListBox;
+    pnlCompBtns: TPanel;
+    pnlComponents: TPanel;
     pnlButtons: TPanel;
     pnlExtra: TPanel;
     pnlInclude: TPanel;
@@ -54,6 +58,8 @@ type
     pnlLprFile: TPanel;
     rgHost: TRadioGroup;
     rgOptimize: TRadioGroup;
+    sgComponents: TStringGrid;
+    procedure btnComponentsClick(Sender: TObject);
     procedure btnIncludeClick(Sender: TObject);
     procedure btnIncludeDelClick(Sender: TObject);
     procedure btnLibraryClick(Sender: TObject);
@@ -76,6 +82,9 @@ var
   FormMain: TFormMain;
 
 implementation
+
+uses
+  frmComponents;
 
 {$R *.lfm}
 
@@ -189,6 +198,15 @@ end;
 procedure TFormMain.btnIncludeClick(Sender: TObject);
 begin
   DoSelectDirectory(lvInclude);
+end;
+
+procedure TFormMain.btnComponentsClick(Sender: TObject);
+begin
+  // TODO: components
+  with TFormComponents.Create(nil) do begin
+    ShowModal;
+    Free;
+  end;
 end;
 
 procedure TFormMain.btnIncludeDelClick(Sender: TObject);

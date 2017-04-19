@@ -14,6 +14,7 @@ type
   TProjectInfo = class
   private
     FCompileHost: Integer;
+    FFPCPackages: TStringList;
     FIni: TIniFile;
     FPath: string;
     FClean: Boolean;
@@ -23,6 +24,7 @@ type
     FLibraryList: TStringList;
     FLpr: string;
     FOptLevel: Integer;
+    FTyphonPackages: TStringList;
     FUnitList: TStringList;
   public
     constructor Create(APath: string);
@@ -38,6 +40,8 @@ type
     property Desktop: Boolean read FDesktop write FDesktop;
     property Clean: Boolean read FClean write FClean;
     property CompileHost: Integer read FCompileHost write FCompileHost;
+    property TyphonPackages: TStringList read FTyphonPackages write FTyphonPackages;
+    property FPCPackages: TStringList read FFPCPackages write FFPCPackages;
   end;
 
 implementation
@@ -47,6 +51,8 @@ const
   SEC_INCLUDE = 'Include';
   SEC_UNIT = 'Unit';
   SEC_LIBRARY = 'Library';
+  SEC_TYPHON_PKG = 'TyphonPkg';
+  SEC_FPC_PKG = 'FPCPkg';
 
   KEY_LPR = 'lpr';
   KEY_DEBUG = 'debug';
@@ -65,6 +71,8 @@ begin
   FIncludeList := TStringList.Create;
   FUnitList := TStringList.Create;
   FLibraryList := TStringList.Create;
+  FTyphonPackages := TStringList.Create;
+  FFPCPackages := TStringList.Create;
 
   FPath:= APath;
   if (not FileExists(FPath)) then Exit;
@@ -78,6 +86,10 @@ begin
   for i := 0 to sl.Count - 1 do FUnitList.Add(sl[i]);
   FIni.ReadSection(SEC_LIBRARY, sl);
   for i := 0 to sl.Count - 1 do FLibraryList.Add(sl[i]);
+  FIni.ReadSection(SEC_TYPHON_PKG, sl);
+  for i := 0 to sl.Count - 1 do FTyphonPackages.Add(sl[i]);
+  FIni.ReadSection(SEC_FPC_PKG, sl);
+  for i := 0 to sl.Count - 1 do FFPCPackages.Add(sl[i]);
   sl.Free;
 
   FDebug:= FIni.ReadBool(SEC_PROJ, KEY_DEBUG, False);
@@ -99,6 +111,8 @@ begin
   for i := 0 to FIncludeList.Count - 1 do FIni.WriteString(SEC_INCLUDE, FIncludeList[i], '');
   for i := 0 to FUnitList.Count - 1 do FIni.WriteString(SEC_INCLUDE, FUnitList[i], '');
   for i := 0 to FLibraryList.Count - 1 do FIni.WriteString(SEC_LIBRARY, FLibraryList[i], '');
+  for i := 0 to FTyphonPackages.Count - 1 do FIni.WriteString(SEC_TYPHON_PKG, FTyphonPackages[i], '');
+  for i := 0 to FFPCPackages.Count - 1 do FIni.WriteString(SEC_FPC_PKG, FFPCPackages[i], '');
 
   FIni.WriteBool(SEC_PROJ, KEY_DEBUG, FDebug);
   FIni.WriteInteger(SEC_PROJ, KEY_OPTLEVEL, FOptLevel);
@@ -110,6 +124,8 @@ begin
   FIncludeList.Free;
   FUnitList.Free;
   FLibraryList.Free;
+  FTyphonPackages.Free;
+  FFPCPackages.Free;
 end;
 
 destructor TProjectInfo.Destroy;
